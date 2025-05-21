@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer.vue'
 
 <template>
   <Header/>
-  <RouterView />
+  <RouterView/>
   <Footer/>
 </template>
 

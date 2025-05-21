@@ -16,9 +16,8 @@ export const usePokemonStore = defineStore("pokemon", () => {
         try {
             const data = await pokemonService.getPokemonList();
             pokemonsList.value = data.results;
-            console.log(pokemonsList.value);
         } catch (error) {
-            error.value = error.message || "Error fetching pokemons";
+            error.value = error.message || "Error al obtener la lista de pokemons";
         } finally {
             isLoading.value = false;
         }
@@ -29,11 +28,10 @@ export const usePokemonStore = defineStore("pokemon", () => {
         try {
             const data = await pokemonService.getPokemonDetails(name);
             pokemon.value = data;
-            console.log(pokemon.value);
             isModalOpen.value = true;
             isLoading.value = false;
         } catch (error) {
-            error.value = error.message || "Error fetching pokemon details";
+            error.value = error.message || "Error al obtener el pokemon";
         } finally {
             isLoading.value = false;
         }

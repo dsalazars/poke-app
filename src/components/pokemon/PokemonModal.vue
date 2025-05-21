@@ -25,8 +25,6 @@ const { pokemon, isModalOpen, closeModal } = pokemonStore;
             {{ pokemon.name }}
           </h2>
         </div>
-
-        <!-- Imagen principal -->
         <div class="flex justify-center mb-4">
           <img
             :src="pokemon.sprites.other?.home?.front_default"
@@ -34,7 +32,6 @@ const { pokemon, isModalOpen, closeModal } = pokemonStore;
             class="h-40 w-40"
           >
         </div>
-        <!-- Peso y altura -->
         <div class="flex justify-center gap-6 text-sm mb-4">
           <div>
             <span class="font-semibold">Peso:</span> {{ pokemon.weight / 10 }} KG

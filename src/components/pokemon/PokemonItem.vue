@@ -11,7 +11,7 @@ const searchPokemon = async (pokemonName) => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 hover:cursor-pointer">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 mb-40 hover:cursor-pointer">
     <div 
       v-for="pokemon in pokemonsList" 
       :key="pokemon.name"

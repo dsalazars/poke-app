@@ -15,9 +15,7 @@ const handleGetPokemons = async () => {
 
 <template>
   <section class="overflow-hidden py-12 md:py-20">
-    <!-- Contenedor principal -->
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 flex flex-col md:flex-col-reverse sm:flex-col lg:flex-row items-center gap-4">
-      <!-- Contenido textual -->
       <div class="text-center lg:text-left md:items-center order-2 md:order-1 max-w-2xl">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
           <span class=" font-medium">¡Bienvenido</span> <span class="font-medium">Entrenador!</span>
@@ -36,7 +34,6 @@ const handleGetPokemons = async () => {
         </button>
       </div>
 
-      <!-- Imagen de Pikachu -->
       <div class="order-1 md:order-2">
         <img 
           :src="PikachuImage" 
