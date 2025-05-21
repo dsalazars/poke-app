@@ -9,12 +9,26 @@ const pokeApi = axios.create({
   }
 })
 
-// Interceptores para manejo centralizado de errores
 pokeApi.interceptors.response.use(
-  (response) => response.data,
-  (error) => {
-    console.error('Error en la API:', error)
-    return Promise.reject(error)
+  response => response.data,
+  error => {
+    if (error.response) {
+      console.error('Error del servidor:', {
+        status: error.response.status,
+        data: error.response.data,
+        headers: error.response.headers,
+      })
+    } else if (error.request) {
+      console.error('Sin respuesta del servidor:', error.request)
+    } else {
+      console.error('Error al configurar la solicitud:', error.message)
+    }
+
+    return Promise.reject({
+      message: error.message,
+    status: error.response?.status,
+    data: error.response?.data
+    })
   }
 )
 
