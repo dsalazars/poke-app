@@ -2,7 +2,11 @@
 import { usePokemonStore } from "@/stores/pokemonStore";
 import { capitalize, getTypeColor } from "@/utils/index"
 
-const { pokemonsList } = usePokemonStore();
+const { pokemonsList, getPokemonDetails } = usePokemonStore();
+
+const searchPokemon = async (pokemonName) => {
+  await getPokemonDetails(pokemonName);
+};
 
 </script>
 
@@ -16,6 +20,7 @@ const { pokemonsList } = usePokemonStore();
       <div 
         class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
         :class="getTypeColor(pokemon.name)"
+        @click="searchPokemon(pokemon.name)"
       >
         
         <div class="p-6 text-center">
