@@ -14,8 +14,8 @@ const handleGetPokemons = async () => {
 </script>
 
 <template>
-  <section class="overflow-hidden py-12 md:py-20">
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 flex flex-col md:flex-col-reverse sm:flex-col lg:flex-row items-center gap-4">
+  <section class="overflow-hidden py-20 md:py-20 lg:py-40 w-full">
+    <div class="max-w-5xl mx-auto sm:px-6 lg:px-8 flex flex-col md:flex-col-reverse sm:flex-col lg:flex-row items-center gap-20">
       <div class="text-center lg:text-left md:items-center order-2 md:order-1 max-w-2xl">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
           <span class=" font-medium">¡Bienvenido</span> <span class="font-medium">Entrenador!</span>
@@ -23,7 +23,7 @@ const handleGetPokemons = async () => {
         <p class="text-lg md:text-xl text-gray-600 mb-8">
           Descubre toda la información sobre tus Pokémon favoritos. Desde sus habilidades hasta sus evoluciones, ¡aquí lo encontrarás todo!
         </p>
-        <button 
+        <button
           @click="handleGetPokemons"
           class="px-8 py-3 bg-red-500 hover:bg-red-600 rounded-full text-white font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group lg:center lg:mx-auto"
         >
@@ -35,10 +35,10 @@ const handleGetPokemons = async () => {
       </div>
 
       <div class="order-1 md:order-2">
-        <img 
-          :src="PikachuImage" 
-          alt="imagen de Pikachu" 
-          class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+        <img
+          :src="PikachuImage"
+          alt="imagen de Pikachu"
+          class="w-64 h-64 md:w-80 md:h-80 lg:w-auto lg:h-auto"
         />
       </div>
     </div>
