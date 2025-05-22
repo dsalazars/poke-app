@@ -19,10 +19,11 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@pinia/testing": "^1.0.1",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.21",
-    "cypress": "^14.2.1",
+    "cypress": "^14.4.0",
     "jsdom": "^26.0.0",
     "postcss": "^8.5.3",
     "start-server-and-test": "^2.0.11",
