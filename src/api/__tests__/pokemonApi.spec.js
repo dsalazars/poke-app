@@ -1,9 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { pokemonService } from '@/api/pokemonApi';
-import pokeApi from '@/api/index';
+import pokeApi from '@/api/axios';
 
 // Mock del módulo pokeApi
-vi.mock('@/api/index', () => ({
+vi.mock('@/api/axios', () => ({
   default: {
     get: vi.fn()
   }

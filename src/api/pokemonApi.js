@@ -1,4 +1,4 @@
-import pokeApi from '@/api/index';
+import pokeApi from '@/api/axios';
 
 export const pokemonService = {
   getPokemonList() {
