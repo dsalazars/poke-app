@@ -1,11 +1,12 @@
-import pokeApi from '@/api/index'
+import pokeApi from '@/api/index';
 
 export const pokemonService = {
   getPokemonList() {
-    return pokeApi.get(`pokemon`)
+    return pokeApi.get('pokemon/');
   },
 
   getPokemonDetails(name) {
-    return pokeApi.get(`pokemon/${name}`)
+    return pokeApi.get(`pokemon/${name}`);
   },
-}
+};
+
