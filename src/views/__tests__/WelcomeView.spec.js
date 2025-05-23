@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import { describe, it, expect, vi } from 'vitest'
 import Hero from '@/components/layout/Hero.vue'
+import WelcomeView from '@/views/WelcomeView.vue'
 
 // Mockeamos Vue Router
 const push = vi.fn()
@@ -43,4 +44,10 @@ describe('Hero.vue', () => {
     await wrapper.find('button').trigger('click')
     expect(pokemonStoreMock.getPokemons).toHaveBeenCalled()
   })
+
+  it('debe renderizar correctamente', () => {
+    const wrapper = mount(WelcomeView);
+    expect(wrapper.exists()).toBe(true);
+  });
+
 })
